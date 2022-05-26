@@ -12,6 +12,7 @@ export async function main(event: APIGatewayEvent, context: Context): Promise<AP
     OutputFormat: 'mp3',
     SampleRate: '8000',
     LanguageCode: 'pt-BR',
+    Engine: 'neural',
     Text: event.queryStringParameters.text,
     TextType: 'text',
     VoiceId: 'Vitoria',
