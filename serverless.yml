@@ -16,6 +16,9 @@ provider:
     STAGE_ENV: ${self:custom.stage}
     
 custom:
+  stage: ${opt:stage, self:provider.stage}
+  region: ${opt:region, self:provider.region}
+  
   webpack:
     keepOutputDirectory: true
     includeModules: true
