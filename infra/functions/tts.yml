@@ -1,0 +1,19 @@
+handler: app/handlers/tts/handler.main
+memorySize: 128
+description: Lambda to convert text into mp3 file audio
+timeout: 5
+runtime: nodejs14.x
+reservedConcurrency: 2
+
+environment:
+  AWS_POLLY_REGION: us-east-1
+
+url: 
+  cors: true
+
+iamRoleStatements:  
+  - Effect: "Allow"
+    Action:
+      - polly:*
+    Resource: 
+      - "*"

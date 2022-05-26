@@ -1,0 +1,4 @@
+Conditions:
+  isDevelopment : {"Fn::Equals" : [ "${self:custom.stage}", "dev"]}
+  isStaging : {"Fn::Equals" : [ "${self:custom.stage}", "staging"]}
+  isProduction : {"Fn::Equals" : [ "${self:custom.stage}", "prod"]}
